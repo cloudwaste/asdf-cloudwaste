@@ -39,12 +39,4 @@ get_download_url() {
   echo "https://github.com/cloudwaste/cloudwaste/releases/download/v${version}/${filename}"
 }
 
-foo() {
-  local platform="$(uname | tr '[:upper:]' '[:lower:]')_amd64"
-  if [[ "$platform" == "darwin_amd64" ]];
-  then
-    platform="mac"
-  fi
-}
-foo
-# install_cloudwaste $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
+install_cloudwaste $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
