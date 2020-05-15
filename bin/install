@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -ex
+set -e
 set -o pipefail
 
 install_cloudwaste() {
@@ -9,7 +9,7 @@ install_cloudwaste() {
   local platform="$(uname | tr '[:upper:]' '[:lower:]')_amd64"
   if [[ "$platform" == "darwin_amd64" ]];
   then
-    platform="mac"
+    platform="mac_amd64"
   fi
 
   local bin_install_path="$install_path/bin"
